@@ -1,0 +1,4 @@
+@RestController
+@RequestMapping("/")
+@RequestParam(value="q",required=false) String variableName // defaults to required = true; URL would be /?q=variableName
+@PathVariable("variableName") Type variableName // pulls variables from URL
