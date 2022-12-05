@@ -8,12 +8,12 @@
 		<version>2.7.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.dominiccaggese.helloworld</groupId>
-	<artifactId>helloworld</artifactId>
+	<groupId>com.dominiccaggese.hoppersreciept</groupId>
+	<artifactId>hoppersreciept</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
-	<name>helloworld</name>
-	<description>fundamentals of getting spring to work with maven</description>
+	<name>hoppersreciept</name>
+	<description>practice assignment using jsp files</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -40,13 +40,13 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
-            <groupId>org.apache.tomcat.embed</groupId>
-            <artifactId>tomcat-embed-jasper</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-        </dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

@@ -1,4 +1,21 @@
-@RestController
+@RestController OR @Controller // @Controller allows for the rendering of HTML pages using java servlet pages
 @RequestMapping("/")
 @RequestParam(value="q",required=false) String variableName // defaults to required = true; URL would be /?q=variableName
 @PathVariable("variableName") Type variableName // pulls variables from URL
+
+Add to pom.xml file in spring project
+
+<dependency>
+	<groupId>org.apache.tomcat.embed</groupId>
+      <artifactId>tomcat-embed-jasper</artifactId>
+</dependency>
+<dependency>
+	<groupId>javax.servlet</groupId>
+      <artifactId>jstl</artifactId>
+</dependency>
+
+Add to application.properties file in src/main/resources:
+
+spring.mvc.view.prefix=/WEB-INF/
+
+Ensure src/main/webapp has a folder called WEB-INF. This files stores our jsp files.
