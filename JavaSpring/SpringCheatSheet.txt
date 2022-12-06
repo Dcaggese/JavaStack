@@ -19,3 +19,8 @@ Add to application.properties file in src/main/resources:
 spring.mvc.view.prefix=/WEB-INF/
 
 Ensure src/main/webapp has a folder called WEB-INF. This files stores our jsp files.
+
+in jsp files add:
+
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
