@@ -3,7 +3,7 @@
 @RequestParam(value="q",required=false) String variableName // defaults to required = true; URL would be /?q=variableName
 @PathVariable("variableName") Type variableName // pulls variables from URL
 
-Add to pom.xml file in spring project
+Add to pom.xml file in spring project:
 
 <dependency>
 	<groupId>org.apache.tomcat.embed</groupId>
@@ -12,6 +12,22 @@ Add to pom.xml file in spring project
 <dependency>
 	<groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
+</dependency>
+<dependency>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+
+//add next two if MySQL Driver and Spring Data JPA not taken as dependencies at project creation
+
+<dependency>
+    <groupId>mysql</groupId>
+    <artifactId>mysql-connector-java</artifactId>
+    <scope>runtime</scope>
+</dependency>
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-jpa</artifactId>
 </dependency>
 
 Add to application.properties file in src/main/resources:
@@ -24,3 +40,14 @@ in jsp files add:
 
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+Validation Annotations:
+@Entity: represents an entity model for our application
+@Table: sets this as a table in the database
+@Id: sets this as the primary key
+@GeneratedValue: sets this as an auto-incrementing value
+@Size adds validation that the column must be in the specified range
+@Min adds validation that the column must be at least the specified value
+@NotNull adds validation that the column must be null
+@PrePersist runs the method right before the object is created
+@PreUpdate runs a method when the object is modified
