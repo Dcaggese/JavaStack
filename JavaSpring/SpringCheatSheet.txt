@@ -59,6 +59,9 @@ Validation Annotations:
 @PrePersist runs the method right before the object is created
 @PreUpdate runs a method when the object is modified
 
+
+Add at end of Getters/Setters in class files:
+
     @PrePersist
     protected void onCreate(){
         this.createdAt = new Date();
