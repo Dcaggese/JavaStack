@@ -14,6 +14,11 @@ Add to pom.xml file in spring project:
       <artifactId>jstl</artifactId>
 </dependency>
 <dependency>
+      <groupId>org.mindrot</groupId>
+      <artifactId>jbcrypt</artifactId>
+      <version>0.4</version>
+</dependency>
+<dependency>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-starter-validation</artifactId>
 </dependency>
@@ -38,6 +43,8 @@ spring.datasource.password=root
 spring.jpa.hibernate.ddl-auto=update
 
 spring.mvc.view.prefix=/WEB-INF/
+
+spring.mvc.hiddenmethod.filter.enabled=true
 
 Ensure src/main/webapp has a folder called WEB-INF. This files stores our jsp files.
 
